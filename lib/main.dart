@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:revin_krishi/core/theme/app_colors.dart';
+
+import 'views/bottom_nav/bottom_nav.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,13 +10,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const Scaffold(body: Center(child: Text('Hello, Flutter!'))),
+      theme: ThemeData(
+        colorScheme: .fromSeed(seedColor: AppColors.primaryGreen),
+      ),
+      home: ScreenBottomNav(),
     );
   }
 }
